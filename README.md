@@ -15,4 +15,3 @@
 
 ### Spotify
 - Using [`spotify-web-api-js`](https://github.com/JMPerez/spotify-web-api-js). Check out [docs](https://doxdox.org/jmperez/spotify-web-api-js).
-# am-to-spotify

@@ -1,0 +1,61 @@
+.button {
+    background-color: var(--color-button);
+    border: 0;
+    border-radius: var(--size-button-padding);
+    color: var(--color-text-button);
+    cursor: pointer;
+    display: inline-block;
+    font-size: var(--font-size-primary);
+    font-weight: 600;
+    line-height: calc(var(--size-button) - 1px);
+    height: var(--size-button);
+    overflow: hidden;
+    padding: 0 var(--size-button-padding);
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.button:after {
+    border-radius: var(--size-button-padding);
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 120ms ease-in-out;
+}
+
+.button:hover:after {
+    background-color: rgba(255,255,255, .12);
+}
+
+.button:active:after {
+    background-color: rgba(0,0,0, .12);
+}
+
+.button:disabled,
+.button:disabled:active,
+.button:disabled:hover {
+    background-color: #888;
+    cursor: default;
+}
+.button:disabled:after {
+    display: none;
+}
+
+.button--am {
+    background-color: var(--color-am);
+}
+
+.button--spotify {
+    background-color: var(--color-spotify);
+}
+
+.button input[type=checkbox] {
+    margin-top: -.3em;
+    vertical-align: middle;
+}

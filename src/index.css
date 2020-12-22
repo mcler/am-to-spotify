@@ -1,0 +1,108 @@
+@import-normalize;
+
+:root {
+    --color-background-primary: #fff;
+    --color-background-secondary: #f2f2f2;
+    --color-border-primary: #ddd;
+    --color-border-secondary: #eee;
+    --color-text-primary: #000;
+    --color-text-secondary: #999;
+    --color-text-button: #fff;
+    --color-bar-background: #e5e5e5;
+    --color-table-header: rgba(255,255,255, .8);
+    --color-button: #2f74de;
+    --color-am: #e63e45;
+    --color-spotify: #65d36e;
+    --size-button: 32px;
+    --size-button-padding: calc(var(--size-button) / 3);
+    --size-row: 24px;
+
+    --size-gutter: 8px;
+
+    --font-size-promo: 42px;
+    --font-size-title: 24px;
+    --font-size-primary: 14px;
+    --font-size-secondary: 12px;
+
+    --time-sm: 66ms;
+    --time-md: 100ms;
+    --time-lg: 120ms;
+
+    --media-phone: 800px;
+
+    --album-cover: 200px;
+    --album-cover-radius: 12%;
+    --album-title: 14px;
+    --album-gutter: 4px;
+
+    --shadow-table-header: 0 2px 0 rgba(0,0,0,.05);
+}
+
+@supports (backdrop-filter: blur(1px)) {
+    :root {
+        --color-table-header: rgba(255,255,255, .2);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background-primary: #111;
+        --color-background-secondary: #222;
+        --color-border-primary: #333;
+        --color-border-secondary: #222;
+        --color-text-primary: #eee;
+        --color-text-secondary: #aaa;
+        --color-text-button: #111;
+        --color-bar-background: #151515;
+        --color-table-header: rgba(17,17,17, .8);
+        --shadow-table-header: 0 2px 0 rgba(0,0,0,.2);
+    }
+
+    @supports (backdrop-filter: blur(1px)) {
+        :root {
+            --color-table-header: rgba(17,17,17, .2);
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    :root {
+        --album-cover: 120px;
+        --album-cover-radius: 8%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--font-size-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: var(--font-size-promo);
+}
+
+h2 {
+    font-size: var(--font-size-title);
+}
+
+.mono,
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.color-am {
+    color: var(--color-am);
+}
+
+.color-spotify {
+    color: var(--color-spotify);
+}

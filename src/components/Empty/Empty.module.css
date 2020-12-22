@@ -1,0 +1,6 @@
+.root {
+    font-size: var(--font-size-primary);
+    color: var(--color-text-secondary);
+    padding: calc(var(--size-gutter) * 2);
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 54px;
+    height: 100vh;
+}
+
+_:default:not(:root:root) .loading {
+    height: -webkit-fill-available;
+}
+
+.inner {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-title);
+    text-align: center;
+}

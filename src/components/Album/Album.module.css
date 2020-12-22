@@ -1,0 +1,87 @@
+.album {
+    cursor: default;
+    padding: var(--size-gutter);
+    user-select: none;
+}
+
+.album__title {
+    color: var(--color-text-primary);
+    margin-top: var(--album-gutter);
+}
+
+.album__title,
+.album__artist {
+    font-size: calc(var(--album-title) - 2px);
+    line-height: var(--album-title);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.album__year,
+.album__artist {
+    color: var(--color-text-secondary);
+}
+
+.cover {
+    /* aspect-ratio: 1; */
+    background-color: var(--color-background-secondary);
+    border-radius: var(--album-cover-radius);
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.cover:before {
+    background-color: rgba(255,255,255,.18);
+    /* backdrop-filter: lightness(150%); */
+    border-radius: var(--album-cover-radius);
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 60ms opacity ease-in;
+    pointer-events: none;
+    touch-action: none;
+    z-index: 3;
+}
+.cover:hover:before {
+    opacity: 1;
+}
+
+.cover img {
+    border-radius: var(--album-cover-radius);
+    color: var(--color-text-secondary);
+    filter: blur(5px);
+    opacity: 0;
+    position: absolute;
+    transition: var(--time-sm) filter ease-in, var(--time-sm) opacity ease-in;
+    pointer-events: none;
+    touch-action: none;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.cover--loaded img {
+    filter: blur(0);
+    opacity: 1;
+}
+
+.cover--empty {
+    background: linear-gradient(135deg, #596680, #968c74);
+}
+
+.cover__check {
+    top: calc(var(--album-cover-radius) / 2);
+    right: calc(var(--album-cover-radius) / 2);
+    pointer-events: none;
+    touch-action: none;
+    position: absolute;
+    z-index: 3;
+}

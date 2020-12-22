@@ -1,0 +1,27 @@
+.root {
+    /* flex: 1 1; */
+    min-height: 0;
+    min-width: 0;
+    /* margin-left: var(--size-gutter); */
+    /* padding: 0 0 0 var(--size-gutter); */
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    .root {
+        padding: 0 0 0 var(--size-gutter);
+    }
+}
+
+.grid {
+    position: relative;
+    /* margin: var(--size-gutter) 0; */
+    /* padding: var(--size-gutter) 0; */
+}
+
+.selectAll {
+    position: absolute;
+    top: var(--size-gutter);
+    left: calc(var(--size-gutter) * 2);
+    z-index: 5;
+}

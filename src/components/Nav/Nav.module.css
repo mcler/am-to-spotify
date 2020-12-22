@@ -1,0 +1,16 @@
+@media (max-width: 800px) {
+    .root {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-rows: 1fr;
+        border: 1px solid var(--color-button);
+        border-radius: var(--size-button-padding);
+        justify-content: stretch;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .root * {
+        grid-row: 1;
+    }
+}
