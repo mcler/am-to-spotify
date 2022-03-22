@@ -1,5 +1,5 @@
 import delay from 'delay';
-import PromisePool from '@supercharge/promise-pool';
+import { PromisePool } from '@supercharge/promise-pool';
 
 import { PROMISE_POOL_SIZE } from '../lib/consts';
 import * as Spotify from '../lib/spotify';

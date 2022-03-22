@@ -1,7 +1,7 @@
 import clamp from 'lodash/clamp';
 import flatten from 'lodash/flatten';
 import range from 'lodash/range';
-import PromisePool from '@supercharge/promise-pool';
+import { PromisePool } from '@supercharge/promise-pool';
 
 import SpotifyWebApi from 'spotify-web-api-js';
 import { PROMISE_POOL_SIZE, SPOTIFY_SCOPES } from 'lib/consts';

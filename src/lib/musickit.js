@@ -1,7 +1,7 @@
 import clamp from 'lodash/clamp';
 import flatten from 'lodash/flatten';
 import range from 'lodash/range';
-import PromisePool from '@supercharge/promise-pool';
+import { PromisePool } from '@supercharge/promise-pool';
 
 import { PROMISE_POOL_SIZE } from 'lib/consts';
 import { APPLE_MUSIC_JWT } from 'lib/credentials';
